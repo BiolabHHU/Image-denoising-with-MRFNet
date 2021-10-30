@@ -1,2 +1,2 @@
 # Image-denoising-with-MRFNet
-Deep residual fusion for image denoising
+Multiscale Residual Fusion Network for Image Denoising
