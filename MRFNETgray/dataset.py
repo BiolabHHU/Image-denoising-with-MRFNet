@@ -83,7 +83,7 @@ class Dataset(udata.Dataset):
         super(Dataset, self).__init__()
         self.train = train
         if self.train:
-            h5f = h5py.File('./trainmax.h5', 'r')
+            h5f = h5py.File('./train.h5', 'r')
         else:
             h5f = h5py.File('./val.h5', 'r')
         self.keys = list(h5f.keys())
