@@ -63,7 +63,7 @@ def prepare_data(data_path, patch_size, stride, aug_times=1):
     h5f.close()
     # val
     print('\nprocess validation data')
-    files = glob.glob(os.path.join(data_path, 'data/CBSD68', '*.bmp'))
+    files = glob.glob(os.path.join(data_path, 'Set68', '*.bmp'))
     files.sort()
     h5f = h5py.File('val.h5', 'w')
     val_num = 0
