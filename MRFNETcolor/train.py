@@ -14,7 +14,7 @@ os.environ["CUDA_DEVICE_ORDER"] = "PCI_BUS_ID"
 os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 
 parser = argparse.ArgumentParser(description="ADNet")
-parser.add_argument("--preprocess", type=bool, default=False, help='run prepare_data or not')
+parser.add_argument("--preprocess", type=bool, default=True, help='run prepare_data or not')
 parser.add_argument("--resume", type=bool, default=False, help='resume from a ckpt or not')
 parser.add_argument("--batchSize", type=int, default=512, help="Training batch size")
 parser.add_argument("--epochs", type=int, default=50, help="Number of training epochs")
@@ -142,7 +142,7 @@ def main():
 if __name__ == "__main__":
     if opt.preprocess:
         if opt.mode == 'S':
-            prepare_data(data_path='data', patch_size=50, stride=40, aug_times=1)
+            prepare_data(data_path='../path', patch_size=50, stride=40, aug_times=1)
         if opt.mode == 'B':
-            prepare_data(data_path='data', patch_size=50, stride=10, aug_times=2)
+            prepare_data(data_path='../path', patch_size=50, stride=10, aug_times=2)
     main()
